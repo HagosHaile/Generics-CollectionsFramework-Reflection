@@ -5,11 +5,21 @@ import java.util.List;
 
 public class Library<T extends Algorithms> {
 	
-	private List<T> list;
+	private List<T> algorithms;
 
 	public Library() {
-		list = new ArrayList<>();
+		algorithms = new ArrayList<>();
 	}
 	
+	public void add(T algorithm) {
+		this.algorithms.add(algorithm);
+	}
+	
+	public T getLast() {
+		if(algorithms.size()<=0)
+			return null;
+		T item = algorithms.remove(algorithms.size()-1);
+		return item;
+	}
 
 }
