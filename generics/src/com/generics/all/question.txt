@@ -1,0 +1,6 @@
+Generics homework exercise
+	Design a class that acts as a library for the following kinds of 
+	algorithms: sorting algorithms, search algorithms and graph algorithms.
+	Provide one version of the class that uses generics.
+	You are allowed to use any built-in data structures to
+	store and retrieve the data. Good luck!

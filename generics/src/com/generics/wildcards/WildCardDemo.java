@@ -16,13 +16,14 @@ public class WildCardDemo {
 		
 		List<String> names = Arrays.asList("Jhone", "Daniel", "Joe");
 		print(names);
+		
+		
 
 	}
 	
-	public static void print(List<?> obj) {
-		obj.stream().forEach(System.out::println);
+	public static void print(List<?> list) {
+		list.stream().forEach(System.out::println);
 	}
-	
 	
 
 }
