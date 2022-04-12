@@ -1,0 +1,15 @@
+Java collections framework
+	The Java collections framework is a set of classes and interfaces that implement 
+	commonly reusable collection data structures.
+
+	Although referred to as a framework, it works in a manner of a library. 
+	The collections framework provides both interfaces that define various collections and 
+	classes that implement them.
+	
+	
+Data structure 
+	-is a data organization, management, and storage format that enables 
+	efficient access and modification.
+	-More precisely, a data structure is a collection of data values, 
+	the relationships among them, and the functions or operations that can be applied to the data
+	i.e., it is an algebraic structure about data.

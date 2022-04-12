@@ -1,0 +1,18 @@
+								ArrayList		doubly linked List
+1. insertion at the beginning						better
+2. insertion at the end			takes approximately the same for both(
+								but array is a little bit better because 
+								doubly linked list has this extra 
+								address update)
+								
+
+Vector
+	-under the hood Vector also uses one dimensional array like ArrayList.
+	-drawback is though we have to know the size of the underlaying
+	one dimensional array at compile time.
+	-Vectors are synchronized by default but we have to aquire the lock before the update 
+	and release after every update which means it is very expensive operation
+	-In general DONT USE IT!!!!
+	
+							
+	
