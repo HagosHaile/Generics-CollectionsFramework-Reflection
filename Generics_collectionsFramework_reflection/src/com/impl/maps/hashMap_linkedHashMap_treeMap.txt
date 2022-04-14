@@ -1,0 +1,70 @@
+HashMap and LinkedHashMap heavily depend on one dimensional array and hash
+	functions
+	the average running time is O(1) and worst is O(N) when collision
+	happens
+	
+	LinkedHash map uses doubly LinkedList preserve the insertion order.
+	can store null keys
+	
+TreeMap uses balanced BST instead of Hashing => Red Black Tree
+	-there is no collisions at all because there is not hash function at all
+		but running time is O(logN) all the time.
+	-can't store null keys
+	-needs less memory
+	
+	
+
+
+
+
+
+
+HashMap
+	-doesn't preserve the insertion order
+
+	
+	
+LinkedHashMap
+	-LinkedHashMap uses doubly linked list to connect the inserted items.
+	-LinkedHashMap uses more memory than standard Maps.
+	-Preserves the order of insertion.
+		-this is the main advantage of linkedHashMap over standard hashMap.
+		
+Tree DS
+	-Search for an arbitrary item takes O(N) running 
+	time for an array and linked list
+	-But if the array is sorted we can achieve O(logN) running time.
+	using Binary search tree.
+	
+	-But most of the items might be on the the left or right side of the tree 
+	creating unbalanced Binary search tree will takes O(N) running time.
+	-In order to achieve the O(logN) running time we should have Balanced 
+	search tree. we can use rotation mechanism to transform in balanced BST
+	to a balanced one.
+there are two balanced BSTs 
+	1. AVL trees
+	
+	2. Red black trees
+	-there are the same number of black nodes from root node to any 
+	leaf node.
+	-Java relies heavily on Red black trees.
+	-is the concrete DS behind TreeMap and TreeSet
+	-is a balanced BST and has a guaranted O(N) running time.
+	-the running time of BST depends on the height of the tree.
+	-AVL trees are faster than Red Black trees(RDT) because they are more 
+	rigidly balanced but need more effort to balance than RBT
+	-it is faster to construct RBT
+	-Operating Systems heavily depend on these DSs.
+
+Red Black Trees
+						average case				worst case
+1. Memory complexity		O(N)						O(N)
+2. Search					O(logN)						O(logN)
+3. Insertion				O(logN)						O(logN)
+3. Deletion					O(logN)						O(logN)
+
+Tree Rotations
+	-we have to update the references for several nodes in O(1) running time.
+	-the BST properties remain the same(parent child relationships)
+	-the in-order traversal is the same after rotation 	
+	

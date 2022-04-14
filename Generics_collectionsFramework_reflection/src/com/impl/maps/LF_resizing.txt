@@ -1,0 +1,22 @@
+Load Factor
+	-the p(x) probability of collision is not constant
+	-the more items are there in the hash table the higher the p(x) probability of collision
+		that is why we have to define a new parameter of the hash table the so called Load factor
+	
+	load factor = N/M where N is the number of actual items
+		and M is the size of the array.
+		a lot of memory is wasted
+		
+		small LF the hash table is nearly empty i.e low probability of collision.
+		High LF the hash table is nearly full i.e high probability of collision.
+		NO Memory is wasted
+		but running time may be reduced to O(N).
+	
+LF and Resizing	
+	Performance heavily relies on LF. when LF>0.75 Java resizes the hash table automatically 
+		to avoid too many collision.
+	Python does at LF>.66
+	hash functions depend on the size of the underlying array DS.
+	
+	when we consider resizing we have to insert the items to the new hash table from the old one.
+		this takes O(N) running which makes it inappropriate for real time applications.
