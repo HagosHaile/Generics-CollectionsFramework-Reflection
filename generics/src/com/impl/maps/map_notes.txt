@@ -1,0 +1,75 @@
+AssociativeArrays(Maps or dictionaries)
+	-AssociativeArrays(Maps or dictionaries) are abstract data types
+	-are implemented with the help of underlying one dimensional array or balanced BST
+	-are composed of key value pairs where key appears at most once.
+	-Most of the time they are implemented with hash tables 
+		But Binary search trees can be used too
+	-the aim is to to reach O(1) time complexity for most operations
+	-associative arrays don't support sorting.
+	-we can achieve O(1) for add(key, value),remove(key, value) and lookup
+	-key value pairs are unordered, that is why sorting is not supported.
+
+
+Hash tables
+	-insertion and remove are O(1) time complexity.
+	-Hash tables are based on one dimensional array.
+	-keys are unique
+	-the key is transformed into array index for 
+		random access using hash function.
+	-h(x) defines the relationship between keys and indexes
+	-h(x) transforms the keys into a range of [0,m-1]
+		and should handle any type including custom objects.
+	-use % for Integers and ASCII for strings for the hash functions.
+	
+	-lets have a string, Integer key value pair.
+	-insert("ADAM", 39) lets use add ASCII of all characters
+		%8 for a an array sized 8
+		65 + 68 + 65 + 77 = 275, then 275%8 =3
+		insert("NAAC", 19) = 78 + 65 + 65 + 67 = 275, then 275%8 = 3
+		the result of the hash function is 3
+		in this case collision happens.
+		
+	-collision happens when the hash function produces 
+		the same array slot(buckets)for different keys
+	-there is no perfect hash function that doesn't produce collision.
+	-There are two ways to deal with collisions
+		1. Chaining: stores the items in the same index in a linked list.
+			in this case At a worst case the hash function may put all the values in the 
+			same index which makes O(n) running time for most operations.
+			and needs additional memories for the additional address for the linked list.
+		2. Open addressing: if we come to conclusion that collision 
+			will happen then we find an other new index for the item using
+			1. Linear probing: if collision happens at index k, 
+				then we try k+1, k+2, ...until we find empty bucket.
+				*** not always best option because there will be clusters 
+				in the underlying array.
+				
+				*** But has better cache performance than other approaches.
+				(due to the underlying OS and programming language)
+	Primary clustering:  is the tendency for a collision resolution scheme
+	such as linear probing to create long runs of filled slots near the 
+	hash position of keys.
+	If the primary hash index is x, subsequent probes go to 
+	x+1, x+2, x+3 and so on, this results in Primary Clustering.
+	
+			2. Quadratic Probing: if collision happens at index k then we 
+			try successive quadratic polynomials like 1, 4, 9, 25, ....
+			-there will not be clustering unlike in linear probing
+			-But doesn't have the caching advantage(items are far away
+			in memory).
+			
+			3. Rehashing: if an index has collision then the hash function
+			again generates new index.
+		
+Linear, quadratic and Rehashing are considered better approaches 
+than using chaining(linked list approach)
+
+- chaining is easier to implement than Open addressing.
+
+	Hash table collisions
+						average case				worst case
+1. Memory complexity		O(N)						O(N)
+2. Search					O(1)						O(N)
+3. Insertion				O(1)						O(N)
+3. Deletion					O(1)						O(N)
+		
