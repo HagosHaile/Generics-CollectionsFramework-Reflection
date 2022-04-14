@@ -1,4 +1,4 @@
-package com.impl.maps;
+package com.maps;
 
 public class Person {
 	private String name;
