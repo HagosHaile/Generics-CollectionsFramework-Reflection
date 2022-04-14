@@ -1,0 +1,36 @@
+Set
+	-an abstract data type that can store certain values without any 
+	particular order and no repeated values - NO DUPLICATIONS.
+	-lists kind of keep some kind order but not sets.
+	-common way of visualizing sets is Venn-Diagram.
+	-there are several important operations on sets such as 
+		UNION and INTERSECTION.
+	-Initial capacity of HashSet is 16.
+	-There is no key and value. Just values
+	-hash code function transforms the input into an array index.
+
+HashSet and LinkedHashSet 
+	-Heavily depend on one dimensional array and hash function similar to HashMap and LinkedHashMap.
+	-If you don't need the insertion order Just use HashSet instead of LinkedHashSet
+		to save the extra memory required for connecting the items.
+	-Running time may reduce to O(N) because of Collisions.
+	-Can store null values
+HashSet
+	-Most operations are O(1) if there is no collision.
+	-Memory heavy as there are many resizing.
+	-???????(there might be collision -O(logN)(using Balanced BST))?????	
+	
+LinkedHashSet
+	-Maintains the insertion order.
+	-Uses Doubly Linked list under the hood to connect the items.
+	-Because of the Doubly linked list it uses more memory than HashSet.
+TreeSet
+	-Implements Iterable, Collection<E>, Set<E>, SortedSet<E>
+	-Uses Red Black tree(i.e Balanced BST) like TreeMap under the hood.
+	-Guarantees O(logN) running time for all operations.
+	-Doesn't use hashing
+	-There is no collision at all
+	-Because of the RBT the items are stored in natural order(i.e. ascending order for integers)
+	-Cann't store null values
+	-Uses Less memory.
+	
