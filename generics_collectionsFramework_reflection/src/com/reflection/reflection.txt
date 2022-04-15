@@ -1,0 +1,11 @@
+Reflection
+	 -Is a programming language's ability to inspect and dynamically methods, classes etc.
+	 -so we can inspect the source code dynamically at run-time with the help of reflection
+	 -Because of OO Design(Polymorphism) we may not know the classes and methods at compile time
+	 -we can't get classes with getClass() method.
+	 -reflection is important since it lets you write programs that do not have to know 
+	 	everything at compile time such as inheritance
+	 -This is how we can make dynamic programs as classes and methods may be tied together at runtime.
+	 -Several frameworks use reflection - Junit and Spring framework.
+	 -For example Junit looks for methods with the @Test annotation.
+	 -The framework will call these methods when we run the tests.
