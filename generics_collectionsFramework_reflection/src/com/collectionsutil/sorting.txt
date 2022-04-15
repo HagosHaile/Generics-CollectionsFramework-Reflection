@@ -1,0 +1,6 @@
+The two most under the hood used sorting algorithms.
+	1.Quick sort - to sort primitive types(int, float, ....)
+		-worst case time complexity - O(N*N)
+		-in average quick sort is the fastest
+	2.MergeSort - sort a reference types (Integer, String ...)
+		-worst case time complexity - O(NlogN)

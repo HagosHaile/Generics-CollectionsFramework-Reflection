@@ -1,0 +1,37 @@
+Comparable
+	-the custom object should implement Comparable interface
+	-Collections.sort doesnt work for custom object if the custom object doesn't implement Comparable interface
+	-it will create compile time error if you try to do so.
+	-override the compareTo method.
+	
+	List<Book> books = new ArrayList<>();
+		
+		books.add(new Book("Daniel", 120));
+		books.add(new Book("Abel", 100));
+		books.add(new Book("Sami", 320));
+		books.add(new Book("Kevin", 170));
+		books.add(new Book("Mary", 520));
+		books.add(new Book("Daniel", 420));
+		Collections.sort(books);
+		for(Book book: books)
+			System.out.println(book.getPages()+"-"+book.getAuthor());
+	
+	
+Comparator
+	-override  compare method.
+	-used when there is an existing custom class which doesn't implement Comparable like in APIs.
+	-helps to separate the custom object and comparison logic
+	
+	List<Person> persons = new ArrayList<>();
+		persons.add(new Person("Daniel", 23, "M"));
+		persons.add(new Person("Abel", 19, "M"));
+		persons.add(new Person("Hai", 20, "F"));
+		persons.add(new Person("Mary", 27, "F"));
+		persons.add(new Person("Jhon", 34, "M"));
+		persons.add(new Person("Kevin", 21, "M"));
+		persons.add(new Person("Katy", 23, "F"));
+		
+		System.out.println("Natural order based on age");
+		Collections.sort(persons, new PersonComparator());
+		for(Person person: persons)
+			System.out.println(person.getAge() + " "+ person.getGender()+ " "+ person.getName());

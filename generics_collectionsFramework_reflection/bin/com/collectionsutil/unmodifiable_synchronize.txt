@@ -1,0 +1,47 @@
+UnModifiable collection
+	There are There are mechanisms to make unmodifiable list, map using 
+	Collections class.
+		-unmodifiableCollection
+		-unmodifiableList
+		-unmodifiableMap
+		-unmodifiableNavigableMap
+		-unmodifiableNavigableSet
+		-unmodifiableSet
+		-unmodifiableSortedMap
+		-unmodifiableSortedSet
+	ones you make a collection unmodifiable
+	you can't add, remove or do any other manipulation on the items.
+	
+Synchronization
+	-All the implementations in collection Framework are unsynchronized
+		we we can only use them for single thread(are not threadSafe) 
+		-The exceptions 
+			1)Vector and Stack.
+			2)HashTable is synchronized by default 
+				but we don't usually use HashTable nowadays.
+				instead we use ConcurrentHashMap
+	-But we can transform these unsynchronized regular collection 
+	implementations using the static synchronized methods in Collections class
+	-some of the methods include(these methods return threadSafe Collection)
+		synchronizedCollection
+		synchronizedList
+		synchronizedMap
+		synchronizedNavigableMap
+		synchronizedNavigableSet
+		synchronizedSet
+		synchronizedSortedMap
+		synchronizedSortedSet
+
+an example of synchronization issue is @ SynchronizationIssue.java file
+where it sometimes throws arrayOutOfBoundException 
+and sometimes prints wrong array size
+	-The problem is happening when Two threads try to manipulate the same 
+	ArrayList at the same time.
+
+SynchronizationIssueResolution.java has the fix.
+	-Basically here the threads should wait each other when they 
+	want to execute independent operations which is called 
+		Intrinsic Lock.
+	-Intrinsic Lock is not efficient.
+The most efficient solution is CONCURRENT COLLECTIONS!!!!
+	

@@ -1,0 +1,17 @@
+Design a class that acts as a cache for the following feature(s):
+
+whenever the user searches for a web address 
+(www.google.com or www.facebook.com) 
+first we have to check whether it is present in the cache or not
+
+of course we have to track recently visited websites as well
+
+for example we use a data structure with capacity 5 - 
+it means we track 5 websites exclusively
+
+the recently visited websites are stored in some part of the data structure 
+- it depends on what concrete class you use :)
+
+provide one version of the class that uses generics. 
+Again you are allowed to use any built-in data structures 
+to store and retrieve the data (for example for the cache).
